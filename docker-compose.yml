@@ -1,0 +1,16 @@
+services:
+  service-pg:
+    image: bitnami/postgresql
+    ports:
+      - "5432:543"
+    environment:
+      - POSTGRES_USER=root
+      - POSTGRES_PASSWORD=root
+      - POSTGRES_DB=exemple
+
+  service-redis:
+    image: bitnami/redis
+    ports:
+      - "6379:6379"
+    environment:
+      - ALLOW_ENPTY_PASSWORD=yes
