@@ -15,7 +15,7 @@ import {
 import { env } from "@/shared/infra/config/env.config";
 import { AppError, getHttpStatusText } from "@/shared/kernel/errors/defaults";
 
-const server = fastify().withTypeProvider<ZodTypeProvider>();
+export const server = fastify().withTypeProvider<ZodTypeProvider>();
 
 server.setSerializerCompiler(serializerCompiler);
 server.setValidatorCompiler(validatorCompiler);
