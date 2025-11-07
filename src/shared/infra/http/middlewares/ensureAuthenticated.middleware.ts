@@ -2,7 +2,7 @@ import type { FastifyReply, FastifyRequest } from "fastify";
 
 export const ensureAuthenticated = async (
 	request: FastifyRequest,
-	reply: FastifyReply
+	reply: FastifyReply,
 ) => {
 	try {
 		await request.jwtVerify();

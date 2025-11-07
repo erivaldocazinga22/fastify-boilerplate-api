@@ -1,5 +1,3 @@
-import { FastifyPluginAsyncZod } from "fastify-type-provider-zod";
+import type { FastifyPluginAsyncZod } from "fastify-type-provider-zod";
 
-export const MainRoute: FastifyPluginAsyncZod = async server => {
-	
-}
+export const MainRoute: FastifyPluginAsyncZod = async (server) => {};

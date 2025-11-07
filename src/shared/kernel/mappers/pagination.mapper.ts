@@ -1,8 +1,8 @@
 interface PaginationMapperParams<T> {
-    data: T[],
-    path: string;
-    page?: number;
-    limit?: number;
+	data: T[];
+	path: string;
+	page?: number;
+	limit?: number;
 }
 
 export interface ReadWithPagination<T> {
@@ -18,8 +18,13 @@ export interface ReadWithPagination<T> {
 	};
 }
 
-export function paginationMapper<T>({ data, page = 1, limit = 10, path }: PaginationMapperParams<T>): ReadWithPagination<T> {
-    const total = data.length;
+export function paginationMapper<T>({
+	data,
+	page = 1,
+	limit = 10,
+	path,
+}: PaginationMapperParams<T>): ReadWithPagination<T> {
+	const total = data.length;
 	const lastPage = Math.ceil(total / limit);
 	return {
 		data,

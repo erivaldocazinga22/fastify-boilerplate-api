@@ -1,4 +1,4 @@
-import { ZodIssue } from "zod/v3";
+import type { ZodIssue } from "zod/v3";
 import { AppError } from "./base.error";
 
 export class BadRequestError extends AppError {
