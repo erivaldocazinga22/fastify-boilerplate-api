@@ -7,7 +7,8 @@
 		"build": "tsup src/shared/infra/http/server.ts --format cjs --dts --out-dir dist --clean",
 		"start": "node -r tsconfig-paths/register dist/server.js",
 		"biome:check": "biome check --write .",
-		"prepare": "husky"
+		"prepare": "husky",
+		"test": "vitest"
 	},
 	"keywords": [],
 	"author": "",
@@ -21,7 +22,8 @@
 		"husky": "^9.1.7",
 		"tsup": "^8.5.0",
 		"tsx": "^4.20.6",
-		"typescript": "^5.9.3"
+		"typescript": "^5.9.3",
+		"vitest": "^4.0.7"
 	},
 	"dependencies": {
 		"@fastify/cors": "^11.1.0",

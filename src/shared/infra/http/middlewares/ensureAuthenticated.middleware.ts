@@ -6,7 +6,7 @@ export const ensureAuthenticated = async (
 ) => {
 	try {
 		await request.jwtVerify();
-	} catch (err) {
+	} catch {
 		reply.code(401).send({
 			status: 401,
 			message:
